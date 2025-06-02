@@ -1,0 +1,12 @@
+body {
+    margin: 0; /* Make full use of the space on the website */
+}
+
+.top-line { /* Create a line spanning across the entire screen. WILL MAINLY BE USED FOR THE TOP! */
+    width: 100%; /* Span across the screen */
+    height: 30px; /* Line thickness */
+    border: none; /* No border */
+    margin-top: 0px; /* No space on top */
+    margin-bottom: 30px; /* Leave some room for elements below */
+    background-color: #4d5ffa; /* Color */
+}
