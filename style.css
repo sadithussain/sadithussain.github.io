@@ -29,7 +29,7 @@ body {
     background-color: #807E75; /* Color */
 }
 
-.navbar {
+.nav-bar {
   display: flex; 
   justify-content: center;
   align-items: center;
@@ -52,10 +52,26 @@ body {
     font-weight: 1000;
     font-size: 30px;
 
-    text-decoration: underline;
-    text-decoration-color: #807E75BF;
-    text-decoration-thickness: 7px;
-    text-underline-offset: -5px;
-    text-decoration-skip-ink: none;
+    text-decoration: none;
+
+    position: relative;
+    display: inline-block;
+    padding-bottom: 8px;
 }
 
+.nav-link::after {
+    content: "";
+    position: absolute;
+    background-color: #807E754D;
+    left: -3px; /* How far left the element goes */
+    right: -3px; /* How far right the element goes */
+    bottom: 15px; /* How far from the bottom the element goes */
+    height: 7px; /* Thickness of the bar */
+    transition: 0.2s ease-in;
+}
+
+.nav-link:hover::after {
+    height: 30px;
+    bottom: 13px;
+    transition: 0.2s ease-in;
+}
