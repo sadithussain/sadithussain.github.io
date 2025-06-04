@@ -1,5 +1,23 @@
+@font-face {
+    font-family: "DMSans";
+    src: url(fonts/DMSans-VariableFont_opsz,wght.ttf) format("truetype");
+    font-weight: 100 1000;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "DMSans";
+    src: url(fonts/DMSans-Italic-VariableFont_opsz,wght.ttf) format("truetype");
+    font-weight: 100 1000; /* Dynamic font, use full allows full range to be used */
+    font-style: italic;
+    font-display: swap;
+}
+
 body {
     margin: 0; /* Make full use of the space on the website */
+    font-family: "DMSans"; /* Font of choice */
+    background-color: #FEFBEA; /* Cream background color; looks calming */
 }
 
 .top-line { /* Create a line spanning across the entire screen. WILL MAINLY BE USED FOR THE TOP! */
@@ -8,13 +26,36 @@ body {
     border: none; /* No border */
     margin-top: 0px; /* No space on top */
     margin-bottom: 50px; /* Leave some room for elements below */
-    background-color: #4d5ffa; /* Color */
+    background-color: #807E75; /* Color */
 }
 
-.navigation-links {
-    display: flex;
+.navbar {
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  padding: 20px 50px;
 }
 
-.navigation-links > div {
-    width:1;
+.black-border {
+    font-weight: 1000; /* Make initials thick */
+    border: 4px solid #000000; /* Border around initials */
+    padding: 5px 5px; /* verticle and horizontal padding between border and letters */
+    border-radius: 10px; /* Thickness of border */
+    font-size: 30px;
 }
+
+.nav-link {
+    margin-left: 20px;
+    margin-right: 20px;
+
+    color: #000000;
+    font-weight: 1000;
+    font-size: 30px;
+
+    text-decoration: underline;
+    text-decoration-color: #807E75BF;
+    text-decoration-thickness: 7px;
+    text-underline-offset: -5px;
+    text-decoration-skip-ink: none;
+}
+
