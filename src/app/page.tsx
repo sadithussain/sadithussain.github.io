@@ -14,16 +14,17 @@ export default function Home() {
         >
           {/* Large, attention-grabbing heading */}
           <h1 className="text-4xl font-extrabold md:text-5xl lg:text-6xl">
-            Hi, I'm Sadit!
+            Hi, I&apos;m Sadit!
           </h1>
 
           {/* Paragraphs with responsive font size */}
           <p className="text-lg md:text-xl">
-            I'm currently a Computer Science student at the City College of New
-            York.
+            I&apos;m currently a Computer Science student at the City College of
+            New York.
           </p>
           <p className="text-lg md:text-xl">
-            I'm interested in front-end development and artificial intelligence.
+            I&apos;m interested in front-end development and artificial
+            intelligence.
           </p>
           <p className="text-lg md:text-xl">
             I love programming due to its power to solve complex problems and
@@ -32,8 +33,8 @@ export default function Home() {
 
           {/* Final call-to-action paragraph */}
           <p className="pt-4 text-lg font-semibold md:text-xl">
-            I'd love to talk, so if you want to get in contact, click one or all
-            of the icons below!
+            I&apos;d love to talk, so if you want to get in contact, refer to my
+            contact section or click the icons below!
           </p>
           <div className="flex items-center justify-center space-x-6 pt-6 md:justify-start">
             {/* LinkedIn Icon */}
