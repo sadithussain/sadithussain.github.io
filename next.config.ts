@@ -1,8 +1,28 @@
-import type { NextConfig } from 'next';
+// next.config.ts
+
+import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  output: 'export',
-  basePath: process.env.PAGES_BASE_PATH,
+  /**
+   * Enable static exports for the App Router.
+   * This is required for GitHub Pages.
+   */
+  output: "export",
+
+  /**
+   * Disable image optimization.
+   * GitHub Pages is a static host and doesn't support Next.js's default image optimization.
+   */
+  images: {
+    unoptimized: true,
+  },
+
+  /**
+   * Add a trailing slash to all paths.
+   * This can help resolve issues with asset paths in static exports,
+   * especially with `next/font`.
+   */
+  trailingSlash: true,
 };
 
-export default nextConfig;
+module.exports = nextConfig;
