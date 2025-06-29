@@ -1,4 +1,4 @@
-/** */
+// new comment
 export default function Home() {
   return (
     // Main container - adjusted top padding to be smaller and more responsive

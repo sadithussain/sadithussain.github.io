@@ -2,7 +2,8 @@
 
 import type { NextConfig } from "next";
 
-const nextConfig: NextConfig = {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   /**
    * Enable static exports for the App Router.
    * This is required for GitHub Pages.
@@ -16,13 +17,6 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
-
-  /**
-   * Add a trailing slash to all paths.
-   * This can help resolve issues with asset paths in static exports,
-   * especially with `next/font`.
-   */
-  trailingSlash: true,
 };
 
 module.exports = nextConfig;
