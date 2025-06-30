@@ -2,6 +2,14 @@ import React from "react";
 
 const projectData = [
   {
+    title: "Portfolio Website",
+    description:
+      "A personal portfolio site built from the ground up to showcase my skills and projects. Designed to be fully responsive and deployed as a static site.",
+    technologies: ["Next.js", "React", "Tailwind CSS", "TypeScript"],
+    githubLink: "https://github.com/sadithussain/sadithussain.github.io",
+    liveLink: "https://sadithussain.github.io/",
+  },
+  {
     title: "Discord Bot",
     description:
       "A feature-rich bot built with Node.js to interact with the Discord API, providing moderation, utility, and server management tools.",
