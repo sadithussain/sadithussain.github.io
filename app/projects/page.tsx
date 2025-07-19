@@ -2,6 +2,21 @@ import React from "react";
 
 const projectData = [
   {
+    title: "Vibe Coder - AI Assistant",
+    description:
+      "A VS Code extension that allows you to use your own Google Gemini API Key to query your own model.",
+    technologies: [
+      "TypeScript",
+      "Node.js",
+      "VS Code API",
+      "Webview API",
+      "Gemini API",
+    ],
+    githubLink: "https://github.com/sadithussain/vibe-coder", // <-- Replace with your actual repo link
+    liveLink:
+      "https://marketplace.visualstudio.com/items?itemName=SaditHussain.vibe-coder-sadit", // You can link to the VS Code Marketplace page here once it's published
+  },
+  {
     title: "Portfolio Website",
     description:
       "A personal portfolio site built from the ground up to showcase my skills and projects. Designed to be fully responsive and deployed as a static site.",
