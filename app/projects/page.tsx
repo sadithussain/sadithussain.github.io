@@ -12,7 +12,7 @@ const projectData = [
       "Webview API",
       "Gemini API",
     ],
-    githubLink: "https://github.com/sadithussain/vibe-coder", // <-- Replace with your actual repo link
+    githubLink: "https://github.com/sadithussain/vibe-coder-vsc-extension-", // <-- Replace with your actual repo link
     liveLink:
       "https://marketplace.visualstudio.com/items?itemName=SaditHussain.vibe-coder-sadit", // You can link to the VS Code Marketplace page here once it's published
   },
