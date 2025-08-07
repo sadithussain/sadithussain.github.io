@@ -34,8 +34,8 @@ export default function Home() {
 
           {/* Final call-to-action paragraph */}
           <p className="pt-4 text-lg font-semibold md:text-xl">
-            I&apos;d love to talk, so if you want to get in contact, refer to my
-            contact section or click the icons below!
+            I&apos;d love to talk, so if you want to get in contact, click the
+            icons below!
           </p>
           <div className="flex items-center justify-center space-x-6 pt-6 md:justify-start">
             {/* LinkedIn Icon */}

@@ -2,7 +2,24 @@ import React from "react";
 
 const projectData = [
   {
-    title: "Vibe Coder - AI Assistant",
+    title: "CUNY RAG Chatbot",
+    description:
+      "A RAG Chatbot curated towards CUNY Freshmen. This chatbot is designed to answer common questions that students may have. Information is gathered from academic calendars, school websites, student input, and Rate My Professor",
+    technologies: [
+      "Python",
+      "LangChain",
+      "Streamlit",
+      "Google Gemini API",
+      "Vector Embeddings",
+      "Chroma DB",
+      "Flowise",
+      "Git",
+    ],
+    githubLink: "https://github.com/sadithussain/cuny-chatbot", // <-- Replace with your actual repo link
+    liveLink: null, // You can link to the VS Code Marketplace page here once it's published
+  },
+  {
+    title: "Visual Studio Code AI Extension",
     description:
       "A VS Code extension that allows you to use your own Google Gemini API Key to query your own model.",
     technologies: [
