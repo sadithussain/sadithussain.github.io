@@ -1,5 +1,5 @@
 // tailwind.config.ts
-
+const { fontFamily } = require("tailwindcss/defaultTheme");
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -13,7 +13,7 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["var(--font-dm-sans)"],
+        sans: ["var(--font-dm-serif-display)", ...fontFamily.serif],
       },
     },
   },

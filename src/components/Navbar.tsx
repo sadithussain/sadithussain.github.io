@@ -1,56 +1,53 @@
 import Link from "next/link";
 import React from "react";
+import Image from "next/image";
+
+const linkStyles = `
+    relative
+    after:content-['']
+    after:absolute
+    after:bg-slate-300
+    after:h-1
+    after:w-0
+    after:bottom-0
+    after:left-0
+    after:transition-all
+    after:duration-300
+    hover:after:w-full
+    hover:text-slate-300
+    inline-flex
+    gap-x-1
+  `;
 
 const Navbar = () => {
-  const linkStyles = `
-    relative py-1 no-underline decoration-transparent
-    after:content-[''] 
-    after:absolute 
-    after:w-[105%] 
-    after:left-1/2 
-    after:-translate-x-1/2 
-    after:bg-gray-400/50
-    after:transition-all after:duration-300 after:ease-in-out
-
-    // Default underline state for mobile and up
-    after:h-[5px]
-    after:bottom-2.5
-
-    // Large screen override for the default underline
-    lg:after:h-[6px]
-    lg:after:bottom-3
-
-    // Hover effect for medium screens and up ONLY
-    md:hover:after:h-[24px]
-    md:hover:after:bottom-2
-
-    // Hover effect override for large screens
-    lg:hover:after:h-[30px]
-    lg:hover:after:bottom-2.5
-  `;
   return (
-    <nav
-      className="flex flex-col md:flex-row justify-center items-center 
-                 space-y-4 md:space-y-0 md:space-x-8 lg:space-x-10 
-                 py-5 
-                 text-xl md:text-2xl lg:text-[30px] 
-                 font-bold"
-    >
-      <Link href="/" className={linkStyles}>
-        Home
-      </Link>
-      <Link href="/projects" className={linkStyles}>
-        Projects
-      </Link>
-      <a
-        href="/resume.pdf"
-        target="_blank"
-        rel="noopener noreferrer"
-        className={linkStyles}
-      >
-        Resume
-      </a>
-    </nav>
+    <div className="flex justify-between px-20 py-8 text-3xl">
+      <div className="">
+        <Link href="/" className={`${linkStyles} font-bold`}>
+          Sadit Hussain
+        </Link>
+      </div>
+
+      <div className="flex gap-x-8">
+        <Link href="/skills" className={linkStyles}>
+          Skills
+        </Link>
+        <Link href="/experience" className={linkStyles}>
+          Experience
+        </Link>
+        <Link href="/projects" className={linkStyles}>
+          Projects
+        </Link>
+        <a
+          href="/resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={linkStyles}
+        >
+          Resume
+        </a>
+      </div>
+    </div>
   );
 };
 
