@@ -1,15 +1,14 @@
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
 
 const Home = () => {
   return (
     <main className="flex items-center justify-center p-8">
       <div className="flex items-start gap-x-20 max-w-6xl">
         <div className="w-2/3 flex flex-col gap-y-4 text-xl">
-          <h1 className="text-5xl">Hi, my name's Sadit!</h1>
+          <h1 className="text-5xl">Hi, my name&apos;s Sadit!</h1>
           <p>
-            I'm a full-stack and AI developer in NYC studying{" "}
+            I&apos;m a full-stack and AI developer in NYC studying{" "}
             <span className="font-semibold text-slate-300">
               Computer Science
             </span>{" "}
@@ -20,13 +19,13 @@ const Home = () => {
             as a 2nd year.
           </p>
           <p>
-            Right now, I'm working on improving my backend skills by working on
-            projects using{" "}
+            Right now, I&apos;m working on improving my backend skills by
+            working on projects using{" "}
             <span className="font-semibold text-slate-300">MySQL</span> and{" "}
             <span className="font-semibold text-slate-300">MongoDB</span>.
           </p>
           <p className="text-3xl">
-            Things I've worked on in the past include...
+            Things I&apos;ve worked on in the past include...
           </p>
           <ul className="list-disc list-inside space-y-2">
             <a
