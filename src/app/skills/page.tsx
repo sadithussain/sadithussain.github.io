@@ -32,7 +32,7 @@ const Skills = () => {
       <h1 className="text-5xl font-bold">Skills</h1>
       <div className="grid grid-cols-4 gap-8 w-full max-w-5xl">
         {skillsData.map((item, index) => (
-          <div key={item.category}>
+          <div key={index}>
             <h2 className="text-2xl font-semibold">{item.category}</h2>
             <ul className="mt-4 text-lg text-left text-slate-300 space-y-2">
               {item.skills.map((skill, i) => (
