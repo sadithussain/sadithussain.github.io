@@ -17,26 +17,26 @@ const experienceData = [
 
 const Experience = () => {
   return (
-    <main className="flex flex-col items-center gap-y-8 p-8 w-full">
-      <h1 className="text-5xl font-bold">Experience</h1>
-      <div className="w-full max-w-4xl">
+    <main className="flex flex-col items-center gap-y-8 p-4 md:p-8 w-full">
+      <h1 className="text-4xl md:text-5xl font-bold">Experience</h1>
+      <div className="w-full max-w-4xl space-y-8">
         {experienceData.map((experience, index) => (
           <div
             key={index}
-            className="group flex gap-x-6 rounded-xl bg-gray-800 p-6 transition-all hover:bg-gray-800/50"
+            className="group flex flex-col md:flex-row gap-4 md:gap-x-6 rounded-xl bg-slate-800/50 p-6 transition-all hover:bg-slate-800/80"
           >
             <div className="flex-grow">
-              <h2 className="text-2xl font-bold transition-colors group-hover:text-slate-300">
+              <h2 className="text-2xl font-bold transition-colors text-slate-100 group-hover:text-sky-300">
                 {experience.title}
               </h2>
-              <ul className="list-disc list-outside pl-4 mt-2 space-y-2 text-slate-300">
+              <ul className="list-disc list-outside pl-5 mt-3 space-y-2 text-slate-300">
                 {experience.description.map((bullet, i) => (
                   <li key={i}>{bullet}</li>
                 ))}
               </ul>
             </div>
 
-            <div className="text-right flex-shrink-0">
+            <div className="flex-shrink-0 text-left md:text-right">
               <p className="text-lg font-semibold">
                 <a
                   href={experience.companyLink}
@@ -47,7 +47,6 @@ const Experience = () => {
                   {experience.company}
                 </a>
               </p>
-
               <p className="text-sm text-slate-400 mt-1">{experience.dates}</p>
               <p className="text-sm text-slate-400">{experience.location}</p>
             </div>
