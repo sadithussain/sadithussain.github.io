@@ -20,12 +20,6 @@ const Home = () => {
             </span>{" "}
             as a 2nd year.
           </p>
-          <p>
-            Right now, I&apos;m working on improving my backend skills by
-            working on projects using{" "}
-            <span className="font-semibold text-slate-300">MySQL</span> and{" "}
-            <span className="font-semibold text-slate-300">MongoDB</span>.
-          </p>
           <p className="text-2xl md:text-3xl font-semibold mt-4">
             Things I&apos;ve worked on in the past include...
           </p>
