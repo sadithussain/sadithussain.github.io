@@ -52,22 +52,6 @@ const PROJECTS: Project[] = [
     accent: "emerald",
     featured: true,
   },
-  {
-    name: "SoundSense",
-    tagline: "Audio classification with TensorFlow and CoreML.",
-    description:
-      "Machine learning pipeline for recognizing sound patterns from recorded data. Focused on model development, preprocessing, and packaging the system into a practical inference workflow for on-device use.",
-    stack: ["TensorFlow", "CoreML", "Python"],
-    accent: "amber",
-  },
-  {
-    name: "U-Fund",
-    tagline: "Community-driven funding platform.",
-    description:
-      "Collaborative platform built as part of a software engineering course focused on architecture and maintainability. Contributed to product structure, collaborative workflows, and scalable team-based development practices.",
-    stack: ["Java", "Angular", "REST"],
-    accent: "blue",
-  },
 ];
 
 type ExperienceItem = {
@@ -213,14 +197,24 @@ function SiteHeader() {
             </a>
           ))}
         </nav>
-        <a
-          href={GITHUB_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hidden rounded-full border border-white/10 px-4 py-1.5 font-mono text-xs text-zinc-300 transition-colors hover:border-white/25 hover:text-white sm:inline-flex"
-        >
-          GitHub
-        </a>
+        <div className="hidden items-center gap-2 sm:flex">
+          <a
+            href={GITHUB_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-full border border-white/10 px-4 py-1.5 font-mono text-xs text-zinc-300 transition-colors hover:border-white/25 hover:text-white"
+          >
+            GitHub
+          </a>
+          <a
+            href={LINKEDIN_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-full border border-white/10 px-4 py-1.5 font-mono text-xs text-zinc-300 transition-colors hover:border-white/25 hover:text-white"
+          >
+            LinkedIn
+          </a>
+        </div>
       </div>
     </header>
   );
@@ -450,25 +444,15 @@ function AboutSection() {
         <div className="space-y-5 text-base leading-relaxed text-zinc-300">
           <p>
             I’m Sadit Hussain, a Computer Science student at Rochester Institute
-            of Technology focused on building software that is both technically
-            rigorous and useful in the real world. My work sits at the intersection
-            of full-stack development and applied AI, where I enjoy turning complex
-            ideas like retrieval-augmented generation, semantic search, and
-            LLM-powered automation into products people can actually use.
+            of Technology working at the intersection of full-stack development
+            and applied AI. I like turning ideas like retrieval-augmented
+            generation and LLM-powered automation into products people can
+            actually use.
           </p>
           <p>
-            Outside of building projects, I also work as a Computer Science Tutor
-            at RIT, where I lead study sessions, create interactive learning
-            activities, and help students break down difficult technical concepts.
-            That teaching experience has shaped how I build software: I care about
-            clarity, thoughtful system design, and creating tools that make
-            complicated workflows feel simple.
-          </p>
-          <p>
-            Whether I’m engineering an AI expense auditing platform, building a
-            smart scheduling system, or designing data pipelines for retrieval-based
-            applications, I’m most excited by products that combine strong backend
-            architecture, polished frontend experiences, and intelligent automation.
+            I also tutor Computer Science at RIT, which has shaped how I build
+            software: I care about clarity, thoughtful system design, and tools
+            that make complicated workflows feel simple.
           </p>
         </div>
         <aside className="rounded-2xl border border-white/10 bg-white/[0.02] p-6">
@@ -476,20 +460,6 @@ function AboutSection() {
             Currently
           </h3>
           <ul className="mt-5 space-y-4 text-sm text-zinc-300">
-            <li className="flex items-start gap-3">
-              <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-sky-400" />
-              <span>
-                Studying full-stack and AI engineering at{" "}
-                <span className="font-medium text-white">RIT</span>.
-              </span>
-            </li>
-            <li className="flex items-start gap-3">
-              <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-violet-400" />
-              <span>
-                Shipping RAG tooling at{" "}
-                <span className="font-medium text-white">HIPE Network</span>.
-              </span>
-            </li>
             <li className="flex items-start gap-3">
               <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-400" />
               <span>
