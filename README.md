@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# sadithussain.github.io
+
+Personal portfolio for **Sadit Hussain** — a full-stack developer and AI engineer studying Computer Science at the Rochester Institute of Technology.
+
+Built with:
+
+- **Next.js 16** (App Router)
+- **React 19**
+- **Tailwind CSS v4**
+- **TypeScript**
+- Deployed as a **static export** to **GitHub Pages**
+
+---
 
 ## Getting Started
 
-First, run the development server:
+Install dependencies and run the dev server:
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Main files:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `app/page.tsx` — all portfolio sections (hero, projects, about, experience, skills, contact)
+- `app/layout.tsx` — root layout, fonts, and site metadata
+- `app/globals.css` — Tailwind v4 import and design tokens
 
-## Learn More
+Update the three constants at the top of `app/page.tsx` (`EMAIL`, `GITHUB_URL`, `LINKEDIN_URL`) to point to your own accounts.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Building for Production
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The project is configured for a static export via `next.config.ts` (`output: "export"`). Build the static site locally with:
 
-## Deploy on Vercel
+```bash
+npm run build
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Next.js will emit the full site into the `out/` directory, which can be hosted on any static host.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## Deploying to GitHub Pages
+
+This repository is named `sadithussain.github.io`, so it is hosted as a **user site** at the root URL `https://sadithussain.github.io` (no `basePath` required).
+
+Deployment is automated through GitHub Actions via [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml):
+
+1. Push to `main`
+2. The workflow installs dependencies, runs `npm run build`, and emits the `out/` directory
+3. A `.nojekyll` marker is added so Jekyll does not drop `_next/` assets
+4. The `out/` directory is uploaded and published via the official GitHub Pages actions
+
+**One-time setup in the repo:**
+
+- Go to **Settings → Pages**
+- Under **Build and deployment**, set **Source** to **GitHub Actions**
+
+After the first successful run, the site will be live at `https://sadithussain.github.io`.
